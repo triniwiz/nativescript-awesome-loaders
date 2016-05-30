@@ -1,4 +1,4 @@
-import common = require('./loading.common');
-export class LoadingIndicator extends common.LoadingIndicator{
+import common = require('./awesome-loaders.common');
+export class AwesomeLoaders extends common.AwesomeLoaders{
     
 }
