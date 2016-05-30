@@ -1,0 +1,40 @@
+{
+	"name": "nativescript-loadingindicator",
+	"version": "1.0.0",
+	"description": "NativeScript plugin to add custom loading indicators",
+	"main": "loading.js",
+	"nativescript": {
+		"platforms": {
+			"android": "1.6.0"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"demo.ios": "npm run preparedemo ;cd demo ;tns emulate ios",
+		"demo.android": "npm run preparedemo ;cd demo ;tns run android",
+		"preparedemo": "npm run build ;cd demo ;tns plugin remove nativescript-loadingindicator ;tns plugin add .. ;tns install",
+		"setup": "cd demo ;npm install ;cd .. ;npm run build ;cd demo ;tns plugin add .. ;cd .."
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/triniwiz/nativescript-loadingindicator.git"
+	},
+	"keywords": [
+		"NativeScript",
+		"JavaScript",
+		"Android"
+	],
+	"author": {
+		"name": "Osei Fortune",
+		"email": "fortune.osei@yahoo.com"
+	},
+	"bugs": {
+		"url": "https://github.com/triniwiz/nativescript-loadingindicator/issues"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/triniwiz/nativescript-loadingindicator",
+	"readmeFilename": "README.md",
+	"devDependencies": {
+		"typescript": "^1.8.10"
+	}
+}

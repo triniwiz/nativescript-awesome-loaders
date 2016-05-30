@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": false
+    },
+    "files": [
+        "demo/node_modules/tns-core-modules/tns-core-modules.d.ts",
+        "loading.common.ts",
+        "loading.android.ts",
+        "loading.ios.ts"
+    ],
+    "compileOnSave": false
+}
