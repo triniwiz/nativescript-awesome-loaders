@@ -5,54 +5,54 @@
 
 ```js
 import {AwesomeLoaders} from 'nativescript-awesome-loaders';
-let li = new AwesomeLoaders();
+let al = new AwesomeLoaders();
 ```    
 
 Set Width 
 
-`li.width = 60`
+`al.width = 60`
 
 Set Height
 
-`li.height = 60`
+`al.height = 60`
 
 Set Indicator
 
-`li.indicator = "Pacman"`
+`al.indicator = "Pacman"`
 
 Set Indicator Color
 
-`li.indicatorColor= "#FFEB3B"`
+`al.indicatorColor= "#FFEB3B"`
 
 TypeScript
 ```ts
 import {AwesomeLoaders} from 'nativescript-awesome-loaders';
 
  let li = new AwesomeLoaders();
-    li.width = 60;
-    li.height = 60;
-    li.indicator = "SemiCircleSpin";
-    li.indicatorColor= "black";
+    al.width = 60;
+    al.height = 60;
+    al.indicator = "SemiCircleSpin";
+    al.indicatorColor= "black";
 ```
 
 JavaScript
 ```js
 var AwesomeLoaders = require('nativescript-awesome-loaders').AwesomeLoaders;
  let li = new AwesomeLoaders();
-    li.width = 60;
-    li.height = 60;
-    li.indicator = "SemiCircleSpin";
-    li.indicatorColor= "black";
+    al.width = 60;
+    al.height = 60;
+    al.indicator = "SemiCircleSpin";
+    al.indicatorColor= "black";
 ```
 
 
 
 ###Xml markup settings
 
-IMPORTANT: Make sure you include xmlns:li="nativescript-awesome-loaders" on the Page element
+IMPORTANT: Make sure you include xmlns:al="nativescript-awesome-loaders" on the Page element
 
 e.g
-`    <li:AwesomeLoaders width="60" height="60"   indicator="Pacman" indicatorColor="#FFEB3B" /> `
+`    <al:AwesomeLoaders width="60" height="60"   indicator="Pacman" indicatorColor="#FFEB3B" /> `
 
 ##Screenshot
 
