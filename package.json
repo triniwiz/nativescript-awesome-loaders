@@ -1,6 +1,6 @@
 {
 	"name": "nativescript-loadingindicator",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "NativeScript plugin to add custom loading indicators",
 	"main": "loading.js",
 	"nativescript": {
