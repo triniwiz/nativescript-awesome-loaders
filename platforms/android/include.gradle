@@ -1,7 +1,7 @@
 android {
     productFlavors {
-        "nativescriptloadingindicator" {
-            dimension "nativescriptloadingindicator"
+        "nativescriptawesomeloaders" {
+            dimension "nativescriptawesomeloaders"
         }
     }
 }

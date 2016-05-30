@@ -6,7 +6,7 @@
     }
   },
   "dependencies": {
-    "nativescript-loadingindicator": "file:..",
+    "nativescript-awesome-loaders": "file:..",
     "tns-core-modules": "^2.0.0"
   },
   "devDependencies": {

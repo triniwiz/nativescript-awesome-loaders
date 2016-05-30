@@ -1,4 +1,4 @@
-import common = require('./loading.common');
+import common = require('./awesome-loaders.common');
 import app = require('application');
 import {PropertyMetadata} from 'ui/core/proxy';
 import {PropertyChangeData} from "ui/core/dependency-observable";
@@ -70,7 +70,7 @@ const SemiCircleSpin = 27;
 
 
 function onIndicatorPropertyChanged(data: PropertyChangeData) {
-    var indicator = <LoadingIndicator>data.object;
+    var indicator = <AwesomeLoaders>data.object;
     if (!indicator.android) {
         return;
     }
@@ -79,7 +79,7 @@ function onIndicatorPropertyChanged(data: PropertyChangeData) {
 }
 
 function onIndicatorColorPropertyChanged(data: PropertyChangeData) {
-    var color = <LoadingIndicator>data.object;
+    var color = <AwesomeLoaders>data.object;
     if (!color.android) {
         return;
     }
@@ -89,11 +89,11 @@ function onIndicatorColorPropertyChanged(data: PropertyChangeData) {
 
 
 
-(<PropertyMetadata>common.LoadingIndicator.indicatorProperty.metadata).onSetNativeValue = onIndicatorPropertyChanged;
-(<PropertyMetadata>common.LoadingIndicator.indicatorColorProperty.metadata).onSetNativeValue = onIndicatorColorPropertyChanged;
+(<PropertyMetadata>common.AwesomeLoaders.indicatorProperty.metadata).onSetNativeValue = onIndicatorPropertyChanged;
+(<PropertyMetadata>common.AwesomeLoaders.indicatorColorProperty.metadata).onSetNativeValue = onIndicatorColorPropertyChanged;
 
 
-export class LoadingIndicator extends common.LoadingIndicator {
+export class AwesomeLoaders extends common.AwesomeLoaders {
     private _android: com.wang.avi.AVLoadingIndicatorView;
 
     get android(): com.wang.avi.AVLoadingIndicatorView {

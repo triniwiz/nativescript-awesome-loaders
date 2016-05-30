@@ -1,11 +1,11 @@
 #Installation
-`tns plugin add nativescript-loadingindicator`
+`tns plugin add nativescript-awesome-loaders`
 
 #Usage
 
 ```js
-import {LoadingIndicator} from 'nativescript-loadingindicator';
-let li = new LoadingIndicator();
+import {AwesomeLoaders} from 'nativescript-awesome-loaders';
+let li = new AwesomeLoaders();
 ```    
 
 Set Width 
@@ -26,9 +26,9 @@ Set Indicator Color
 
 TypeScript
 ```ts
-import {LoadingIndicator} from 'nativescript-loadingindicator';
+import {AwesomeLoaders} from 'nativescript-awesome-loaders';
 
- let li = new LoadingIndicator();
+ let li = new AwesomeLoaders();
     li.width = 60;
     li.height = 60;
     li.indicator = "SemiCircleSpin";
@@ -37,8 +37,8 @@ import {LoadingIndicator} from 'nativescript-loadingindicator';
 
 JavaScript
 ```js
-var LoadingIndicator = require('nativescript-loadingindicator').LoadingIndicator;
- let li = new LoadingIndicator();
+var AwesomeLoaders = require('nativescript-awesome-loaders').AwesomeLoaders;
+ let li = new AwesomeLoaders();
     li.width = 60;
     li.height = 60;
     li.indicator = "SemiCircleSpin";
@@ -49,10 +49,10 @@ var LoadingIndicator = require('nativescript-loadingindicator').LoadingIndicator
 
 ###Xml markup settings
 
-IMPORTANT: Make sure you include xmlns:li="nativescript-loadingindicator" on the Page element
+IMPORTANT: Make sure you include xmlns:li="nativescript-awesome-loaders" on the Page element
 
 e.g
-`    <li:LoadingIndicator width="60" height="60"   indicator="Pacman" indicatorColor="#FFEB3B" /> `
+`    <li:AwesomeLoaders width="60" height="60"   indicator="Pacman" indicatorColor="#FFEB3B" /> `
 
 ##Screenshot
 

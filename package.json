@@ -1,8 +1,8 @@
 {
-	"name": "nativescript-loadingindicator",
+	"name": "nativescript-awesome-loaders",
 	"version": "1.0.1",
 	"description": "NativeScript plugin to add custom loading indicators",
-	"main": "loading.js",
+	"main": "awesome-loaders.js",
 	"nativescript": {
 		"platforms": {
 			"android": "1.6.0"
@@ -12,12 +12,12 @@
 		"build": "tsc",
 		"demo.ios": "npm run preparedemo ;cd demo ;tns emulate ios",
 		"demo.android": "npm run preparedemo ;cd demo ;tns run android",
-		"preparedemo": "npm run build ;cd demo ;tns plugin remove nativescript-loadingindicator ;tns plugin add .. ;tns install",
+		"preparedemo": "npm run build ;cd demo ;tns plugin remove nativescript-awesome-loaders ;tns plugin add .. ;tns install",
 		"setup": "cd demo ;npm install ;cd .. ;npm run build ;cd demo ;tns plugin add .. ;cd .."
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/triniwiz/nativescript-loadingindicator.git"
+		"url": "https://github.com/triniwiz/nativescript-awesome-loaders.git"
 	},
 	"keywords": [
 		"NativeScript",
@@ -29,10 +29,10 @@
 		"email": "fortune.osei@yahoo.com"
 	},
 	"bugs": {
-		"url": "https://github.com/triniwiz/nativescript-loadingindicator/issues"
+		"url": "https://github.com/triniwiz/nativescript-awesome-loaders/issues"
 	},
 	"license": "MIT",
-	"homepage": "https://github.com/triniwiz/nativescript-loadingindicator",
+	"homepage": "https://github.com/triniwiz/nativescript-awesome-loaders",
 	"readmeFilename": "README.md",
 	"devDependencies": {
 		"typescript": "^1.8.10"

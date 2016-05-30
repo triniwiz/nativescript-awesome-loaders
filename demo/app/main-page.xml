@@ -1,52 +1,52 @@
-<Page   xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:li="nativescript-loadingindicator">
-  <ActionBar title="{N} Loading Indicators"/>
+<Page   xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:al="nativescript-awesome-loaders">
+  <ActionBar title="{N} Awesome Loaders"/>
   <GridLayout rows="*,*,*,*,*,*,*">
     <GridLayout columns="*,*,*,*">
-    <li:LoadingIndicator width="60" height="60" indicator="BallPulse" indicatorColor="#F44336" />
-    <li:LoadingIndicator indicatorColor="#9E9E9E" col="1" width="60" height="60"  indicator="BallGridPulse" />
-    <li:LoadingIndicator indicatorColor="#607D8B" col="2" width="60" height="60"  indicator="BallClipRotate" />
-    <li:LoadingIndicator indicatorColor="#CDDC39" col="3" width="60" height="60"  indicator="BallClipRotatePulse" />
+    <al:AwesomeLoaders width="60" height="60" indicator="BallPulse" indicatorColor="#F44336" />
+    <al:AwesomeLoaders indicatorColor="#9E9E9E" col="1" width="60" height="60"  indicator="BallGridPulse" />
+    <al:AwesomeLoaders indicatorColor="#607D8B" col="2" width="60" height="60"  indicator="BallClipRotate" />
+    <al:AwesomeLoaders indicatorColor="#CDDC39" col="3" width="60" height="60"  indicator="BallClipRotatePulse" />
     </GridLayout>
     
     <GridLayout row="1" columns="*,*,*,*">
-    <li:LoadingIndicator indicatorColor="#9C27B0" width="60" height="60"  indicator="SquareSpin" />
-    <li:LoadingIndicator indicatorColor="#000000" col="1" width="60" height="60"  indicator="BallClipRotateMultiple" />
-    <li:LoadingIndicator indicatorColor="#AA55BB" col="2" width="60" height="60"  indicator="BallPulseRise" />
-    <li:LoadingIndicator indicatorColor="#1EFF65" col="3" width="60" height="60"  indicator="BallRotate" />
+    <al:AwesomeLoaders indicatorColor="#9C27B0" width="60" height="60"  indicator="SquareSpin" />
+    <al:AwesomeLoaders indicatorColor="#000000" col="1" width="60" height="60"  indicator="BallClipRotateMultiple" />
+    <al:AwesomeLoaders indicatorColor="#AA55BB" col="2" width="60" height="60"  indicator="BallPulseRise" />
+    <al:AwesomeLoaders indicatorColor="#1EFF65" col="3" width="60" height="60"  indicator="BallRotate" />
     </GridLayout>
     
       <GridLayout row="2" columns="*,*,*,*">
-    <li:LoadingIndicator indicatorColor="#4CAF50" width="60" height="60"  indicator="CubeTransition" />
-    <li:LoadingIndicator col="1" width="60" height="60"   indicator="BallZigZag" />
-    <li:LoadingIndicator col="2" width="60" height="60"  indicator="BallZigZagDeflect" />
-    <li:LoadingIndicator col="3" width="60" height="60"  indicator="BallTrianglePath" />
+    <al:AwesomeLoaders indicatorColor="#4CAF50" width="60" height="60"  indicator="CubeTransition" />
+    <al:AwesomeLoaders col="1" width="60" height="60"   indicator="BallZigZag" />
+    <al:AwesomeLoaders col="2" width="60" height="60"  indicator="BallZigZagDeflect" />
+    <al:AwesomeLoaders col="3" width="60" height="60"  indicator="BallTrianglePath" />
     </GridLayout>
     
     <GridLayout row="3" columns="*,*,*,*">
-    <li:LoadingIndicator indicatorColor="#FF9800" width="60" height="60"  indicator="BallScale" />
-    <li:LoadingIndicator col="1" width="60" height="60"  indicator="LineScale" />
-    <li:LoadingIndicator col="2" width="60" height="60"  indicator="LineScaleParty" />
-    <li:LoadingIndicator col="3" width="60" height="60"  indicator="BallScaleMultiple" />
+    <al:AwesomeLoaders indicatorColor="#FF9800" width="60" height="60"  indicator="BallScale" />
+    <al:AwesomeLoaders col="1" width="60" height="60"  indicator="LineScale" />
+    <al:AwesomeLoaders col="2" width="60" height="60"  indicator="LineScaleParty" />
+    <al:AwesomeLoaders col="3" width="60" height="60"  indicator="BallScaleMultiple" />
     </GridLayout>
     
       <GridLayout row="4" columns="*,*,*,*">
-    <li:LoadingIndicator indicatorColor="#FF5722" width="60" height="60"  indicator="BallPulseSync" />
-    <li:LoadingIndicator col="1" width="60" height="60"  indicator="BallBeat" />
-    <li:LoadingIndicator col="2" width="60" height="60"  indicator="LineScalePulseOut" />
-    <li:LoadingIndicator col="3" width="60" height="60"  indicator="LineScalePulseOutRapid" />
+    <al:AwesomeLoaders indicatorColor="#FF5722" width="60" height="60"  indicator="BallPulseSync" />
+    <al:AwesomeLoaders col="1" width="60" height="60"  indicator="BallBeat" />
+    <al:AwesomeLoaders col="2" width="60" height="60"  indicator="LineScalePulseOut" />
+    <al:AwesomeLoaders col="3" width="60" height="60"  indicator="LineScalePulseOutRapid" />
     </GridLayout>
     
     <GridLayout row="5" columns="*,*,*,*">
-    <li:LoadingIndicator indicatorColor="#795548" width="60" height="60"  indicator="BallScaleRipple" />
-    <li:LoadingIndicator indicatorColor="#16FCC9" col="1" width="60" height="60"  indicator="BallScaleRippleMultiple" />
-    <li:LoadingIndicator indicatorColor="#FAFC06" col="2" width="60" height="60"  indicator="BallSpinFadeLoader" />
-    <li:LoadingIndicator indicatorColor="#CE5F0F"  col="3" width="60" height="60"  indicator="LineSpinFadeLoader" />
+    <al:AwesomeLoaders indicatorColor="#795548" width="60" height="60"  indicator="BallScaleRipple" />
+    <al:AwesomeLoaders indicatorColor="#16FCC9" col="1" width="60" height="60"  indicator="BallScaleRippleMultiple" />
+    <al:AwesomeLoaders indicatorColor="#FAFC06" col="2" width="60" height="60"  indicator="BallSpinFadeLoader" />
+    <al:AwesomeLoaders indicatorColor="#CE5F0F"  col="3" width="60" height="60"  indicator="LineSpinFadeLoader" />
     </GridLayout>
     
       <GridLayout row="6" columns="*,*,*,*" id="gl">
-    <li:LoadingIndicator col="1" indicatorColor="pink" width="60" height="60"  indicator="TriangleSkewSpin" />
-    <li:LoadingIndicator col="2" width="60" height="60"   indicator="Pacman" indicatorColor="#FFEB3B" />
-    <li:LoadingIndicator indicatorColor="orange" col="3" width="60" height="60"  indicator="BallGridBeat" />
+    <al:AwesomeLoaders col="1" indicatorColor="pink" width="60" height="60"  indicator="TriangleSkewSpin" />
+    <al:AwesomeLoaders col="2" width="60" height="60"   indicator="Pacman" indicatorColor="#FFEB3B" />
+    <al:AwesomeLoaders indicatorColor="orange" col="3" width="60" height="60"  indicator="BallGridBeat" />
     </GridLayout>
     
   </GridLayout>
