@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/nativescript-awesome-loaders.svg)](https://www.npmjs.com/package/nativescript-awesome-loaders)
+[![npm](https://img.shields.io/npm/dt/nativescript-awesome-loaders.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-awesome-loaders)
 #Installation
 `tns plugin add nativescript-awesome-loaders`
 
