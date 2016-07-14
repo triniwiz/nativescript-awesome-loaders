@@ -1,9 +1,10 @@
+declare var com: any;
 import common = require('./awesome-loaders.common');
 import app = require('application');
 import {PropertyMetadata} from 'ui/core/proxy';
 import {PropertyChangeData} from "ui/core/dependency-observable";
 import {Color} from 'color';
-declare var com: any;
+
 
 const BallBeatIndicator = com.wang.avi.indicator.BallBeatIndicator;
 const BallClipRotateIndicator = com.wang.avi.indicator.BallClipRotateIndicator;
