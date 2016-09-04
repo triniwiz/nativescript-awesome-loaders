@@ -7,7 +7,7 @@
         "sourceMap": true
     },
     "files": [
-        "demo/node_modules/tns-core-modules/tns-core-modules.d.ts",
+        "./node_modules/tns-core-modules/tns-core-modules.d.ts",
         "awesome-loaders.common.ts",
         "awesome-loaders.android.ts",
         "awesome-loaders.ios.ts"

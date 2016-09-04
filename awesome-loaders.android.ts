@@ -100,11 +100,13 @@ export class AwesomeLoaders extends common.AwesomeLoaders {
     get android(): com.wang.avi.AVLoadingIndicatorView {
         return this._android;
     }
+    get _nativeView(){
+        return this._android;
+    }
     public _createUI() {
         if (!this.indicator) return;
         this._android = new com.wang.avi.AVLoadingIndicatorView(this._context);
     }
-
     _setIndicator(indicator) {
         if (!indicator) return;
         switch (indicator) {

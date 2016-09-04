@@ -1,10 +1,9 @@
 import * as app from 'application';
-import * as view from 'ui/core/view';
 import {Property, PropertyMetadataSettings, PropertyChangeData} from "ui/core/dependency-observable";
 import {PropertyMetadata} from "ui/core/proxy";
+import {ContentView} from "ui/content-view";
 
-
-export class AwesomeLoaders extends view.View {
+export class AwesomeLoaders extends ContentView {
 
   static indicatorProperty = new Property("indicator", "AwesomeLoaders", new PropertyMetadata(undefined, PropertyMetadataSettings.None))
   static indicatorColorProperty = new Property("indicatorColor", "AwesomeLoaders", new PropertyMetadata(undefined, PropertyMetadataSettings.None))
