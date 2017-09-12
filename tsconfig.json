@@ -1,16 +1,37 @@
 {
     "compilerOptions": {
-        "target": "es5",
         "module": "commonjs",
-        "removeComments": true,
+        "target": "es5",
+        "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
-        "sourceMap": true
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "lib": [
+            "es6",
+            "dom",
+            "es2015.iterable"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
+            ]
+        }
     },
     "files": [
-        "demo/node_modules/tns-core-modules/tns-core-modules.d.ts",
+        // "demo/node_modules/tns-core-modules/tns-core-modules.d.ts",
         "awesome-loaders.common.ts",
         "awesome-loaders.android.ts",
         "awesome-loaders.ios.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "platforms",
+        "**/*.aot.ts",
+        "**/*.spec.ts"
     ],
     "compileOnSave": false
 }

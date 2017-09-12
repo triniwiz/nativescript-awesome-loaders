@@ -1,205 +1,118 @@
+import { AwesomeLoaders as Root, indicatorProperty, indicatorColorProperty } from "./awesome-loaders.common";
+import { Color } from 'color';
+
 declare var com: any;
-import common = require('./awesome-loaders.common');
-import app = require('application');
-import {PropertyMetadata} from 'ui/core/proxy';
-import {PropertyChangeData} from "ui/core/dependency-observable";
-import {Color} from 'color';
 
+export class AwesomeLoaders extends Root {
+    private _android; /* com.wang.avi.AVLoadingIndicatorView */
 
-const BallBeatIndicator = com.wang.avi.indicator.BallBeatIndicator;
-const BallClipRotateIndicator = com.wang.avi.indicator.BallClipRotateIndicator;
-const BallClipRotateMultipleIndicator = com.wang.avi.indicator.BallClipRotateMultipleIndicator;
-const BallClipRotatePulseIndicator = com.wang.avi.indicator.BallClipRotatePulseIndicator;
-const BallGridBeatIndicator = com.wang.avi.indicator.BallGridBeatIndicator;
-const BallGridPulseIndicator = com.wang.avi.indicator.BallGridPulseIndicator;
-const BallPulseIndicator = com.wang.avi.indicator.BallPulseIndicator;
-const BallPulseRiseIndicator = com.wang.avi.indicator.BallPulseRiseIndicator;
-const BallPulseSyncIndicator = com.wang.avi.indicator.BallPulseSyncIndicator;
-const BallRotateIndicator = com.wang.avi.indicator.BallRotateIndicator;
-const BallScaleIndicator = com.wang.avi.indicator.BallScaleIndicator;
-const BallScaleMultipleIndicator = com.wang.avi.indicator.BallScaleMultipleIndicator;
-const BallScaleRippleIndicator = com.wang.avi.indicator.BallScaleRippleIndicator;
-const BallScaleRippleMultipleIndicator = com.wang.avi.indicator.BallScaleRippleMultipleIndicator;
-const BallSpinFadeLoaderIndicator = com.wang.avi.indicator.BallSpinFadeLoaderIndicator;
-const BallTrianglePathIndicator = com.wang.avi.indicator.BallTrianglePathIndicator;
-const BallZigZagDeflectIndicator = com.wang.avi.indicator.BallZigZagDeflectIndicator;
-const BallZigZagIndicator = com.wang.avi.indicator.BallZigZagIndicator;
-const BaseIndicatorController = com.wang.avi.indicator.BaseIndicatorController;
-const CubeTransitionIndicator = com.wang.avi.indicator.CubeTransitionIndicator;
-const LineScaleIndicator = com.wang.avi.indicator.LineScaleIndicator;
-const LineScalePartyIndicator = com.wang.avi.indicator.LineScalePartyIndicator;
-const LineScalePulseOutIndicator = com.wang.avi.indicator.LineScalePulseOutIndicator;
-const LineScalePulseOutRapidIndicator = com.wang.avi.indicator.LineScalePulseOutRapidIndicator;
-const LineSpinFadeLoaderIndicator = com.wang.avi.indicator.LineSpinFadeLoaderIndicator;
-const PacmanIndicator = com.wang.avi.indicator.PacmanIndicator;
-const SemiCircleSpinIndicator = com.wang.avi.indicator.SemiCircleSpinIndicator;
-const SquareSpinIndicator = com.wang.avi.indicator.SquareSpinIndicator;
-const TriangleSkewSpinIndicator = com.wang.avi.indicator.TriangleSkewSpinIndicator;
-
-
-
-
-const BallPulse = 0;
-const BallGridPulse = 1;
-const BallClipRotate = 2;
-const BallClipRotatePulse = 3;
-const SquareSpin = 4;
-const BallClipRotateMultiple = 5;
-const BallPulseRise = 6;
-const BallRotate = 7;
-const CubeTransition = 8;
-const BallZigZag = 9;
-const BallZigZagDeflect = 10;
-const BallTrianglePath = 11;
-const BallScale = 12;
-const LineScale = 13;
-const LineScaleParty = 14;
-const BallScaleMultiple = 15;
-const BallPulseSync = 16;
-const BallBeat = 17;
-const LineScalePulseOut = 18;
-const LineScalePulseOutRapid = 19;
-const BallScaleRipple = 20;
-const BallScaleRippleMultiple = 21;
-const BallSpinFadeLoader = 22;
-const LineSpinFadeLoader = 23;
-const TriangleSkewSpin = 24;
-const Pacman = 25;
-const BallGridBeat = 26;
-const SemiCircleSpin = 27;
-
-
-
-function onIndicatorPropertyChanged(data: PropertyChangeData) {
-    var indicator = <AwesomeLoaders>data.object;
-    if (!indicator.android) {
-        return;
+    get android() /* com.wang.avi.AVLoadingIndicatorView */ {
+        return this.nativeView;
     }
 
-    indicator._setIndicator(data.newValue ? data.newValue : null);
-}
-
-function onIndicatorColorPropertyChanged(data: PropertyChangeData) {
-    var color = <AwesomeLoaders>data.object;
-    if (!color.android) {
-        return;
-    }
-
-    color._setIndicatorColor(data.newValue ? data.newValue : null);
-}
-
-
-
-(<PropertyMetadata>common.AwesomeLoaders.indicatorProperty.metadata).onSetNativeValue = onIndicatorPropertyChanged;
-(<PropertyMetadata>common.AwesomeLoaders.indicatorColorProperty.metadata).onSetNativeValue = onIndicatorColorPropertyChanged;
-
-
-export class AwesomeLoaders extends common.AwesomeLoaders {
-    private _android: com.wang.avi.AVLoadingIndicatorView;
-
-    get android(): com.wang.avi.AVLoadingIndicatorView {
-        return this._android;
-    }
-    public _createUI() {
+    public createNativeView() {
         if (!this.indicator) return;
         this._android = new com.wang.avi.AVLoadingIndicatorView(this._context);
+        return this._android;
     }
 
-    _setIndicator(indicator) {
+    [indicatorProperty.setNative](indicator: string) {
         if (!indicator) return;
         switch (indicator) {
             case 'BallPulse':
-                this._android.setIndicator(new BallPulseIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallPulseIndicator());
                 break;
             case 'BallGridPulse':
-                this._android.setIndicator(new BallGridPulseIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallGridPulseIndicator());
                 break;
             case 'BallClipRotate':
-                this._android.setIndicator(new BallClipRotateIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallClipRotateIndicator());
                 break;
             case 'BallClipRotatePulse':
-                this._android.setIndicator(new BallClipRotatePulseIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallClipRotatePulseIndicator());
                 break;
             case 'SquareSpin':
-                this._android.setIndicator(new SquareSpinIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.SquareSpinIndicator());
                 break;
             case 'BallClipRotateMultiple':
-                this._android.setIndicator(new BallClipRotateMultipleIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallClipRotateMultipleIndicator());
                 break;
             case 'BallPulseRise':
-                this._android.setIndicator(new BallPulseRiseIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallPulseRiseIndicator());
                 break;
             case 'BallRotate':
-                this._android.setIndicator(new BallRotateIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallRotateIndicator());
                 break;
             case 'CubeTransition':
-                this._android.setIndicator(new CubeTransitionIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.CubeTransitionIndicator());
                 break;
             case 'BallZigZag':
-                this._android.setIndicator(new BallZigZagIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallZigZagIndicator());
                 break;
             case 'BallZigZagDeflect':
-                this._android.setIndicator(new BallZigZagDeflectIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallZigZagDeflectIndicator());
                 break;
             case 'BallTrianglePath':
-                this._android.setIndicator(new BallTrianglePathIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallTrianglePathIndicator());
                 break;
             case 'BallScale':
-                this._android.setIndicator(new BallScaleIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallScaleIndicator());
                 break;
             case 'LineScale':
-                this._android.setIndicator(new LineScaleIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.LineScaleIndicator());
                 break;
             case 'LineScaleParty':
-                this._android.setIndicator(new LineScalePartyIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.LineScalePartyIndicator());
                 break;
             case 'BallScaleMultiple':
-                this._android.setIndicator(new BallScaleMultipleIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallScaleMultipleIndicator());
                 break;
             case 'BallPulseSync':
-                this._android.setIndicator(new BallPulseSyncIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallPulseSyncIndicator());
                 break;
             case 'BallBeat':
-                this._android.setIndicator(new BallBeatIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallBeatIndicator());
                 break;
             case 'LineScalePulseOut':
-                this._android.setIndicator(new LineScalePulseOutIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.LineScalePulseOutIndicator());
                 break;
             case 'LineScalePulseOutRapid':
-                this._android.setIndicator(new LineScalePulseOutRapidIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.LineScalePulseOutRapidIndicator());
                 break;
             case 'BallScaleRipple':
-                this._android.setIndicator(new BallScaleRippleIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallScaleRippleIndicator());
                 break;
             case 'BallScaleRippleMultiple':
-                this._android.setIndicator(new BallScaleRippleMultipleIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallScaleRippleMultipleIndicator());
                 break;
             case 'BallSpinFadeLoader':
-                this._android.setIndicator(new BallSpinFadeLoaderIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallSpinFadeLoaderIndicator());
                 break;
             case 'LineSpinFadeLoader':
-                this._android.setIndicator(new LineSpinFadeLoaderIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.LineSpinFadeLoaderIndicator());
                 break;
             case 'TriangleSkewSpin':
-                this._android.setIndicator(new TriangleSkewSpinIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.TriangleSkewSpinIndicator());
                 break;
             case 'Pacman':
-                this._android.setIndicator(new PacmanIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.PacmanIndicator());
                 break;
             case 'BallGridBeat':
-                this._android.setIndicator(new BallGridBeatIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.BallGridBeatIndicator());
                 break;
             case 'SemiCircleSpin':
-                this._android.setIndicator(new SemiCircleSpinIndicator());
+                this.nativeView.setIndicator(new com.wang.avi.indicator.SemiCircleSpinIndicator());
                 break;
         }
-
-
     }
-    _setIndicatorColor(color) {
+
+    [indicatorColorProperty.setNative](color: Color) {
         if (color) {
-            const data = new Color(color);
-            this._android.setColor(data.android);
+            this.nativeView.setColor(color.android);
         }
+    }
+
+    public disposeNativeView() {
+        this._android = undefined;
     }
 }
