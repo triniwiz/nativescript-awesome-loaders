@@ -1,28 +1,22 @@
-import * as app from 'application';
-import * as view from 'ui/core/view';
-import {Property, PropertyMetadataSettings, PropertyChangeData} from "ui/core/dependency-observable";
-import {PropertyMetadata} from "ui/core/proxy";
+import { View } from 'ui/core/view';
+import { Property } from "ui/core/properties";
+import { Color } from "color";
 
-
-export class AwesomeLoaders extends view.View {
-
-  static indicatorProperty = new Property("indicator", "AwesomeLoaders", new PropertyMetadata(undefined, PropertyMetadataSettings.None))
-  static indicatorColorProperty = new Property("indicatorColor", "AwesomeLoaders", new PropertyMetadata(undefined, PropertyMetadataSettings.None))
-
-  constructor() {
-    super();
-  }
-  get indicator(): string {
-    return this._getValue(AwesomeLoaders.indicatorProperty);
-  }
-  set indicator(value: string) {
-    this._setValue(AwesomeLoaders.indicatorProperty, value);
-  }
-  get indicatorColor(): string {
-    return this._getValue(AwesomeLoaders.indicatorColorProperty);
-  }
-  set indicatorColor(value: string) {
-    this._setValue(AwesomeLoaders.indicatorColorProperty, value);
-
-  }
+export class AwesomeLoaders extends View {
+  protected indicator: string = null;
 }
+
+export const indicatorProperty = new Property<AwesomeLoaders, boolean>({
+  name: "indicator",
+  defaultValue: null
+});
+indicatorProperty.register(AwesomeLoaders);
+
+
+export const indicatorColorProperty = new Property<AwesomeLoaders, Color>({
+  name: "indicatorColor",
+  equalityComparer: Color.equals,
+  defaultValue: null,
+  valueConverter: v => new Color(v)
+});
+indicatorColorProperty.register(AwesomeLoaders);

@@ -5,7 +5,7 @@
 	"main": "awesome-loaders.js",
 	"nativescript": {
 		"platforms": {
-			"android": "1.5.0"
+			"android": "3.2.0"
 		}
 	},
 	"scripts": {
@@ -34,7 +34,10 @@
 	"license": "MIT",
 	"homepage": "https://github.com/triniwiz/nativescript-awesome-loaders",
 	"readmeFilename": "README.md",
+	"dependencies": {
+		"tns-core-modules": "^3.2.0"
+	},
 	"devDependencies": {
-		"typescript": "^1.8.10"
+		"typescript": "~2.4.2"
 	}
 }
